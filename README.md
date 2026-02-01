@@ -2,31 +2,9 @@
 This is an web scraping bot that automates the process of job applications on LinkedIn. It searches for jobs relevant to you, answers all questions in application form, customizes your resume based on the collected job information, such as skills required, description, about company, etc. and applies to the job. Can apply 100+ jobs in less than 1 hour. 
 
 
-## 📽️ See it in Action
-[![Auto Job Applier demo video](https://github.com/GodsScion/Auto_job_applier_linkedIn/assets/100998531/429f7753-ebb0-499b-bc5e-5b4ee28c4f69)](https://youtu.be/gMbB1fWZDHw)
-Click on above image to watch the demo or use this link https://youtu.be/gMbB1fWZDHw
-
-
-## ✨ Content
-- [Introduction](#linkedin-ai-auto-job-applier-)
-- [Demo Video](#%EF%B8%8F-see-it-in-action)
-- [Index](#-content)
-- [Install](#%EF%B8%8F-how-to-install)
-- [Configure](#-how-to-configure)
-- [Contributor Guidelines](#‍-contributor-guidelines)
-- [Updates](%EF%B8%8F-major-updates-history)
-- [Disclaimer](#-disclaimer)
-- [Terms and Conditions](#%EF%B8%8F-terms-and-conditions)
-- [License](#%EF%B8%8F-license)
-- [Socials](#-socials)
-- [Support and Discussions](#-community-support-and-discussions)
-
 <br>
 
 ## ⚙️ How to install
-
-[![Auto Job Applier setup tutorial video](https://github.com/user-attachments/assets/9e876187-ed3e-4fbf-bd87-4acc145880a2)](https://youtu.be/f9rdz74e1lM?si=4fRBcte0nuvr6tEH)
-Click on above image to watch the tutorial for installation and configuration or use this link https://youtu.be/f9rdz74e1lM (Recommended to watch it in 2x speed)
 
 1. [Python 3.10](https://www.python.org/) or above. Visit https://www.python.org/downloads/ to download and install Python, or for windows you could visit Microsoft Store and search for "Python". **Please make sure Python is added to Path in System Environment Variables**.
 2. Install necessary [Undetected Chromedriver](https://pypi.org/project/undetected-chromedriver/), [PyAutoGUI](https://pypi.org/project/PyAutoGUI/) and [Setuptools](https://pypi.org/project/setuptools/) packages. After Python is installed, OPEN a console/terminal or shell, Use below command that uses the [pip](https://pip.pypa.io/en/stable) command-line tool to install these 3 package.
@@ -40,7 +18,6 @@ Click on above image to watch the tutorial for installation and configuration or
   ***OR*** 
   <br> <br>
   If you are using Windows, click on `windows-setup.bat` available in the `/setup` folder, this will install the latest chromedriver automatically.
-6. If you have questions or need help setting it up or to talk in general, join the github server: https://discord.gg/fFp7uUzWCY
 
 [back to index](#-content)
 
@@ -55,18 +32,11 @@ Click on above image to watch the tutorial for installation and configuration or
 6. (Optional) Don't forget to add you default resume in the location you mentioned in `default_resume_path = "all resumes/default/resume.pdf"` given in `/config/questions.py`. If one is not provided, it will use your previous resume submitted in LinkedIn or (In Development) generate custom resume if OpenAI APT key is provided!
 7. Run `runAiBot.py` and see the magic happen.
 8. To run the Applied Jobs history UI, run `app.py` and open web browser on `http://localhost:5000`.
-8. If you have questions or need help setting it up or to talk in general, join the github server: https://discord.gg/fFp7uUzWCY
 
 [back to index](#-content)
 
 <br>
 
-
-## 🧑‍💻 Contributor Guidelines
-Thank you for your efforts and being a part of the community. All contributions are appreciated no matter how small or big. Once you contribute to the code base, your work will be remembered forever.
-
-NOTE: Only Pull request to `community-version` branch will be accepted. Any other requests will be declined by default, especially to main branch.
-Once your code is tested, your changes will be merged to the `main` branch in next cycle.
 
 ### Code Guidelines
   #### Functions:
@@ -191,81 +161,6 @@ Once your code is tested, your changes will be merged to the `main` branch in ne
 
 [back to index](#-content)
 
-## 🗓️ Major Updates History:
-### Jan 20, 2026
-- You can now simultaneously use chrome, while bot continues applying in a new window
-
-### Jul 20, 2024
-- Contributions from community have been added
-- Better AI support, minor bug fixes
-
-### Nov 28, 2024
-- Patched to work for latest changes in Linkedin.
-- Users can now select to follow or not follow companies when submitting application.
-- Frameworks for future AI Developments have been added.
-- AI can now be used to extract skills from job description. 
-
-### Oct 16, 2024
-- Framework for OpenAI API and Local LLMs
-- Framework for RAG
-
-### Sep 09, 2024
-- Smarter Auto-fill for salaries and notice periods
-- Robust Search location filter, will work in window mode (No need for full screen)
-- Better logic for Select and Radio type questions
-- Proper functioning of Decline to answer questions in Equal Employment opportunity questions
-- Checkbox questions select fail bug fixed
-- Annotations are clearer in instructions for setup
-
-### Sep 07, 2024
-- Annotations for developers
-- Robust input validations
-- Restructured config file
-- Fixed pagination bug
-
-### Aug 21, 2024
-- Performance improvements (skip clicking on applied jobs and blacklisted companies)
-- Stop when easy apply application limit is reached
-- Added ability to discard from pause at submission dialogue box
-- Added support for address input
-- Bug fixed radio questions, added support for physical disability questions
-- Added framework for future config file updates
-
-### June 19, 2024
-- Major Bug fixes (Text Area type questions)
-- Made uploading default resume as not required
-
-### May 15, 2024
-- Added functionality for textarea type questions `summary`, `cover_letter`(Summary, Cover letter); checkbox type questions (acknowledgements)
-- Added feature to skip irrelevant jobs based on `bad_words` 
-- Improved performance for answering questions
-- Logic change for masters students skipping
-- Change variable names `blacklist_exceptions` -> `about_company_good_words` and `blacklist_words` -> `about_company_bad_words`
-- Added session summary for logs
-- Added option to turn off "Pause before Submit" until next run
-
-### May 05, 2024
-- For questions similar to "What is your current location?", City posted in Job description will be posted as the answer if `current_city` is left empty in the configuration
-- Added option to over write previously saved answers for a question `overwrite_previous_answers`
-- Tool will now save previous answer of a question
-- Tool will now collect all available options for a Radio type or Select type question
-- Major update in answering logic for Easy Apply Application questions
-- Added Safe mode option for quick stable launches `safe_mode`
-
-### May 04, 2024
-- Added option to fill in "City, state, or zip code" search box `search_location`
-- Bug fixes in answering City or location question
-
-
-[back to index](#-content)
-
-<br>
-
-## 📜 Disclaimer
-
-**This program is for educational purposes only. By downloading, using, copying, replicating, or interacting with this program or its code, you acknowledge and agree to abide by all the Terms, Conditions, Policies, and Licenses mentioned, which are subject to modification without prior notice. The responsibility of staying informed of any changes or updates bears upon yourself. For the latest Terms & Conditions, Licenses, or Policies, please refer to [Auto Job Applier](https://github.com/GodsScion/Auto_job_applier_linkedIn). Additionally, kindly adhere to and comply with LinkedIn's terms of service and policies pertaining to web scraping. Usage is at your own risk. The creators and contributors of this program emphasize that they bear no responsibility or liability for any misuse, damages, or legal consequences resulting from its usage.**
-
-
 ## 🏛️ Terms and Conditions
 
 Please consider the following:
@@ -299,20 +194,6 @@ See [AGPLv3 LICENSE](LICENSE) for more info.
 [back to index](#-content)
 
 <br>
-
-## 🐧 Socials
-- **Project** : Auto_job_applier_linkedIn
-
-
-## 🙌 Community Support and Discussions
-- **Discord Server** : https://discord.gg/fFp7uUzWCY
-alternate link: https://discord.gg/ykfDjRFB
-- **GitHub**
-  - Project discussion links have been redacted to remove personal repository references.
-
-
-#### ℹ️ Version: 26.01.20.5.08
-
 ---
 
 [back to the top](#linkedin-ai-auto-job-applier-)
